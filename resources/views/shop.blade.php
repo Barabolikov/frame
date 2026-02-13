@@ -3,13 +3,19 @@
 @section('title','Наш магазин')
 
 @section('content')
-    <div>
+    <div class="col-8" >
         <h2>Тут будуть товари</h2>
-
-            @foreach($tovar as $tov)
-                @foreach($tov as $t)
-                    <div style="width: 30%; border: #0a0a0a 1px solid; float: left"> {{ $t }}</div>
-                @endforeach
+        <div class="row">
+            @foreach($products as $product)
+                <div class="kol-4 cart">
+                    <div>
+                        <div>
+                            <h5>{{ $product->name }}</h5>
+                            <p>{{ $product->description }}</p>
+                            <div>{{ $product->price }} грн.</div>
+                            <button class="btn btn-primary">Купити</button>
+                        </div>
+                    </div>
             @endforeach
 
     </div>
