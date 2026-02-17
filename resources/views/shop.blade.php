@@ -6,6 +6,11 @@
     <div class="col-8" >
         <h2>Тут будуть товари</h2>
         <div class="row">
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             @foreach($products as $product)
                 <div class="kol-4 cart">
                     <div>
