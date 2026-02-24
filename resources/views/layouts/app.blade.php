@@ -20,11 +20,11 @@
     @include('layouts.header')
 
     <div class="container row main">
-        <div class="col-8">
+        <div class="col-10">
             @yield('content')
 
         </div>
-        <div class="col-4">
+        <div class="col-2">
             @include('layouts.aside')
         </div>
     </div>

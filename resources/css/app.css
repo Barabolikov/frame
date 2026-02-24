@@ -1,6 +1,9 @@
 
 div.main {
+    text-align: center;
     min-height: 300px;
+    margin-left: 30px;
+    padding: 20px;
 }
 
 form {
@@ -8,4 +11,41 @@ form {
 }
 .form-control {
     margin: 5px;
+}
+.cart {
+    text-align: center;
+    border: #1c1c1a 1px solid;
+    border-radius: 5px;
+    width: 30%;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+}
+.filter {
+    text-align: right;
+    margin: 10px;
+}
+a.add {
+    padding: 10px;
+    background-color: #064509;
+
+    color: #ffffff;
+    border-radius: 5px;
+}
+a.add:hover, a.add:active {
+    color: #8f8a8a;
+}
+form {
+    text-align: left;
+}
+label {
+    padding: 2px;
+    padding-left: 10px;
+}
+.but {
+    padding: 5px;
+}
+p.desc {
+    min-height: 50px;
+    max-height: 80px;
 }
