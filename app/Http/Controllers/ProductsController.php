@@ -24,9 +24,18 @@ class ProductsController extends Controller
             'name'=>'required|max:255|min:3',
             'price'=>'required|min:0',
             'description'=>'string',
-            'category_id'=>'exists:categories,id'
+            'category_id'=>'exists:categories,id',
+            'image'=>'nullable|image|max:2048'
         ]);
-       Product::create($validated);
+        $path='no-name.jpg';
+        $data=$request->all();
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('images','public');
+        }
+        $data['image']=$path;
+
+
+       Product::create($data);
         return redirect('/shop')->with('success','Товар збережено');
     }
     public function view($id)

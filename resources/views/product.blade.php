@@ -15,6 +15,10 @@
 
                     <p class="desc">{{ $product->description }}</p>
                     <div>{{ $product->price }} грн.</div>
+                    <product-widget
+                        :product-id="{{ $product->id }}"
+                        :initial-stock="1">
+                    </product-widget>
                     <div class="but">
                         <a href="{{ url('shop/product/' . $product->id. '/edit') }}" class="btn btn-info">Редагувати</a>
                         <form action="{{ url('shop/product/' . $product->id) }}" method="post">

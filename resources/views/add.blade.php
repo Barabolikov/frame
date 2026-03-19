@@ -16,7 +16,7 @@
             </div>
         @endif
         <div >
-            <form action="{{ url('/shop/create') }}" method="POST">
+            <form action="{{ url('/shop/create') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <label>Категорія</label>
                 <select name="category_id" class="form-control">
@@ -31,8 +31,8 @@
                 <textarea class="form-control" name="description" placeholder="Введи опис" > {{ old('description') }}</textarea>
                 <label for="name">Ціна товарy</label>
                 <input class="form-control" type="number" name="price" placeholder="10" value="{{ old('price') }}">
-
-
+                <label for="image">Зображення продукту</label>
+                <input class="form-control" type="file" name="image">
                     <button class="btn btn-info">Зберегти</button>
 
 
