@@ -25,10 +25,16 @@
                     @endif
                     <p class="desc">{{ $product->description }}</p>
                     <div>{{ $product->price }} грн.</div>
+                    <product-widget
+                        :product-id="{{ $product->id }}"
+                        :initial-stock="1"
+                        :price-tovar="{{ $product->price }}">
+                    </product-widget>
                     <div class="but">
                         <a href={{ url('shop/product/' . $product->id) }} class="btn btn-info">Детальніще</a>
                         <a class="btn btn-primary">Купити</a>
                     </div>
+                    <productinfo-widget :item='@json($product)'></productinfo-widget>
                 </div>
             </div>
         @endforeach

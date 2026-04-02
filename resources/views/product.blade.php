@@ -17,7 +17,8 @@
                     <div>{{ $product->price }} грн.</div>
                     <product-widget
                         :product-id="{{ $product->id }}"
-                        :initial-stock="1">
+                        :initial-stock="1"
+                        :price-tovar="{{ $product->price }}">
                     </product-widget>
                     <div class="but">
                         <a href="{{ url('shop/product/' . $product->id. '/edit') }}" class="btn btn-info">Редагувати</a>
